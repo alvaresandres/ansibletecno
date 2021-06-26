@@ -1,0 +1,12 @@
+- name: enable 8080
+  firewalld:
+    zone: public
+    port: 8080/tcp
+    permanent: true
+    state: enabled
+  become: yes
+
+- name: reload service firewalld
+  systemd:
+    name: firewalld
+    state: reloaded

@@ -1,0 +1,5 @@
+- name: install Jenkins 
+  hosts: jenkins
+  roles:
+    - role: dummy/dummy.hello-world
+    - role: jenkins/jenkins.install
